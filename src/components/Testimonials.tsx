@@ -20,7 +20,7 @@ const Testimonials = () => {
       name: "Enma ",
       business: "Bodega La Esquinita",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-      testimonial: "Su app móvil nos permitió crear un 'Uber para mecánicos'. Ahora conectamos con clientes que necesitan servicio a domicilio.",
+      testimonial: "Su app móvil nos permitió organizar nuestro inventario y reducir las horas en el cálculo de las ganancias diarias . Ahora tenemos un resumen detallando de las ventas y los productos que están en stock",
       rating: 5
     }
   ];
