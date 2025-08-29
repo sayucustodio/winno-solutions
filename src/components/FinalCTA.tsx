@@ -40,7 +40,7 @@ const FinalCTA = () => {
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-sm opacity-80">
           <div className="flex items-center space-x-2">
             <div className="w-2 h-2 bg-white rounded-full"></div>
-            <span>Respuesta en 24 horas</span>
+            <span>Respuesta dentro de las 24 horas</span>
           </div>
           <div className="flex items-center space-x-2">
             <div className="w-2 h-2 bg-white rounded-full"></div>

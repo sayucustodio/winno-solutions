@@ -1,25 +1,28 @@
 import { Star } from 'lucide-react';
-
+import test1_img from '../assets/testimonios/test1.png';
+import test2_img from '../assets/testimonios/test2.jpg';
+import test3_img from '../assets/testimonios/test3.jpg';
 const Testimonials = () => {
   const testimonials = [
     {
       name: "Tito Minaya",
       business: "Centro Odontológico Pacífico",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      image: test1_img,
       testimonial: "Con WINNO Solutions optimizamos nuestros procesos manuales. Ahora controlamos a los pacientes, médicos, tratamientos y ventas en tiempo real y ahorramos tiempo y trabajo",
       rating: 5
     },
     {
       name: "Yesenia Blas",
-      business: "Salón de Belleza Innova Estetik",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b332c13a?w=150&h=150&fit=crop&crop=face",
-      testimonial: "La plataforma de reservas online cambió nuestro negocio. Los clientes pueden agendar citas 24/7 y nosotros organizamos mejor nuestro tiempo.",
+      business: "Salón de Belleza Innova Esthetic",
+      image: test2_img,
+      testimonial: "Con el sistema de control de ingresos y salidas mejoramos la puntualidad y organización del personal. Ahora tenemos reportes claros y ahorramos tiempo en la gestión.",
       rating: 5
     },
+    
     {
-      name: "Enma ",
+      name: "Enma Vásquez",
       business: "Bodega La Esquinita",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      image: test3_img,
       testimonial: "Su app móvil nos permitió organizar nuestro inventario y reducir las horas en el cálculo de las ganancias diarias . Ahora tenemos un resumen detallando de las ventas y los productos que están en stock",
       rating: 5
     }

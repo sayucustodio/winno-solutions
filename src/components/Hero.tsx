@@ -1,4 +1,4 @@
-import heroIllustration from '@/assets/hero_conection.svg';
+import heroIllustration from '@/assets/hero-illustration.jpg';
 
 const Hero = () => {
   return (
@@ -11,13 +11,13 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              <span className="gradient-text">Innova. Crece. Gana</span>
+              <span className="gradient-text-2">Conectamos negocios con soluciones inteligentes</span>
               <br />
-              con tecnología.
+              
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-              Transformamos tu idea en sistemas digitales modernos: desde plataformas de gestión para tu negocio hasta landing pages con pagos, marketplaces y apps móviles a medida.
+              Transformamos tu idea en sistemas digitales modernos: desde plataformas de gestión para tu negocio hasta landing pages profesionales y apps móviles a medida.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -38,7 +38,7 @@ const Hero = () => {
           <div className="relative">
             <div className="animate-float">
               <img
-                src={heroIllustration}
+                src="https://www.freewayfranchise.com/es/blog/wp-content/uploads/sites/2/2024/04/Como-elegir-una-idea-de-negocio-rentable-1024x621.jpg"
                 alt="Profesionales usando tecnología moderna"
                 className="w-full h-auto rounded-3xl shadow-2xl"
               />

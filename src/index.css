@@ -7,11 +7,12 @@
 @layer base {
   :root {
     /* Brand Colors - Sky Blue to Fuchsia */
-    --primary: 243 100% 69%;        /* Sky Blue #38BDF8 */
+    --primary: 243 100% 69% ; 
+    /* 243 100% 69%;        Sky Blue #38BDF8 */
     --primary-glow: 199 95% 84%;   /* Lighter sky blue */
     --secondary: 200 98% 67%;      /* Professional Blue #0EA5E9 */
     --accent: 249 90% 68%;         /* Purple #6366F1 */
-    --highlight: 329 86% 70%;      /* Fuchsia #EC4899 */
+    --highlight: 187, 100%, 42%;      /* Fuchsia #EC4899 */
     
     /* Background & Text */
     --background: 0 0% 100%;
@@ -165,6 +166,10 @@
   /* Gradient Text */
   .gradient-text {
     @apply bg-gradient-to-r from-primary via-accent to-highlight bg-clip-text text-transparent;
+  }
+  .gradient-text-2 {
+    @apply bg-gradient-to-r via-accent to-highlight bg-clip-text text-transparent;
+    color: #3a415a;
   }
   
   /* Section Spacing */

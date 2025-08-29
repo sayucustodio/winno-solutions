@@ -9,10 +9,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', name: 'Facebook' },
-    { icon: Instagram, href: '#', name: 'Instagram' },
-    { icon: Linkedin, href: '#', name: 'LinkedIn' },
-    { icon: MessageCircle, href: '#', name: 'WhatsApp' }
+    { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61579592981734', name: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/winno.solutions.pe?igsh=MTk0YTVsbWxnbmpvcw==', name: 'Instagram' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/winnosolutions/', name: 'LinkedIn' },
+    { icon: MessageCircle, href: 'https://wa.me/51966442710', name: 'WhatsApp' }
   ];
 
   return (
@@ -72,8 +72,8 @@ const Footer = () => {
             </div>
             
             <div className="text-gray-300 text-sm">
-              <p>📧 contacto@winnosolutions.pe</p>
-              <p>📱 +51 999 888 777</p>
+              <p>📧 winno.solutions@gmail.com</p>
+              <p>📱 +51 966442710</p>
             </div>
           </div>
         </div>

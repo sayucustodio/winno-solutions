@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from '@/assets/winnito_3.png';
+import logo from '@/assets/post instagram_winno solutions (1).png';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -22,15 +22,16 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-xl">W</span>
-              {/* <img
+            {/* <div className="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center"> */}
+              {/* <span className="text-white font-bold text-xl">W</span> */}
+              <img
                 src={logo}
+                className="w-40 h-18"
                 alt="Profesionales usando tecnología moderna"
                 
-              /> */}
-            </div>
-            <span className="text-xl font-bold gradient-text">WINNO SOLUTIONS</span>
+              />
+            {/* </div> */}
+            {/* <span className="text-xl font-bold gradient-text">WINNO SOLUTIONS</span> */}
           </div>
 
           {/* Desktop Navigation */}
