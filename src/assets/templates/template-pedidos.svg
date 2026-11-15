@@ -1,0 +1,118 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Flowing dotted cyan line -->
+  <path d="M 310 620 C 420 540, 520 500, 600 450 C 700 400, 780 480, 850 500"
+        fill="none" stroke="#00E1F7" stroke-width="3" stroke-dasharray="8,8"
+        stroke-linecap="round" filter="url(#cyanGlow)"/>
+
+  <!-- Floating dashboard panel -->
+  <g transform="translate(380, 260) rotate(-12) skewX(-18) scale(1, 0.88)">
+    <rect x="-250" y="-180" width="500" height="360"
+          fill="#0B1020" fill-opacity="0.60" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="-250" y="-180" width="500" height="360"
+          fill="none" stroke="#00E1F7" stroke-width="2" filter="url(#cyanGlow)" opacity="0.5"/>
+
+    <!-- Header bar -->
+    <rect x="-250" y="-180" width="500" height="50" fill="#3267FD" fill-opacity="0.25"/>
+    <rect x="-220" y="-165" width="80" height="20" fill="#3267FD"/>
+    <rect x="-120" y="-165" width="140" height="20" fill="#FFFFFF" fill-opacity="0.12"/>
+    <line x1="-250" y1="-130" x2="250" y2="-130" stroke="#00E1F7" stroke-width="1" opacity="0.4"/>
+
+    <!-- Order row 1 — cyan status chip -->
+    <rect x="-220" y="-110" width="40" height="40" fill="#3267FD"/>
+    <line x1="-160" y1="-90" x2="-40" y2="-90" stroke="#3267FD" stroke-width="3"/>
+    <line x1="-160" y1="-75" x2="40" y2="-75" stroke="#3267FD" stroke-width="3" opacity="0.5"/>
+    <rect x="170" y="-108" width="36" height="36" fill="#00E1F7"/>
+    <line x1="-230" y1="-50" x2="230" y2="-50" stroke="#3267FD" stroke-width="1" opacity="0.25"/>
+
+    <!-- Order row 2 — blue status chip -->
+    <rect x="-220" y="-30" width="40" height="40" fill="#FFFFFF" fill-opacity="0.15"/>
+    <line x1="-160" y1="-10" x2="-40" y2="-10" stroke="#3267FD" stroke-width="3"/>
+    <line x1="-160" y1="5" x2="40" y2="5" stroke="#3267FD" stroke-width="3" opacity="0.5"/>
+    <rect x="170" y="-28" width="36" height="36" fill="#3267FD"/>
+    <line x1="-230" y1="30" x2="230" y2="30" stroke="#3267FD" stroke-width="1" opacity="0.25"/>
+
+    <!-- Order row 3 — outlined status chip -->
+    <rect x="-220" y="50" width="40" height="40" fill="#3267FD" fill-opacity="0.5"/>
+    <line x1="-160" y1="70" x2="-40" y2="70" stroke="#3267FD" stroke-width="3"/>
+    <line x1="-160" y1="85" x2="40" y2="85" stroke="#3267FD" stroke-width="3" opacity="0.5"/>
+    <rect x="170" y="52" width="36" height="36" fill="none" stroke="#00E1F7" stroke-width="2"/>
+  </g>
+
+  <!-- Product tile -->
+  <g transform="translate(240, 620) rotate(-12) skewX(-18) scale(1, 0.88)">
+    <rect x="-70" y="-70" width="140" height="140"
+          fill="#0B1020" fill-opacity="0.60" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="-70" y="-70" width="140" height="140"
+          fill="none" stroke="#00E1F7" stroke-width="2" filter="url(#cyanGlow)" opacity="0.5"/>
+    <rect x="-50" y="-50" width="100" height="80" fill="#3267FD"/>
+    <rect x="-20" y="-30" width="40" height="40" fill="#00E1F7" fill-opacity="0.5"/>
+    <rect x="-50" y="40" width="100" height="20" fill="#00E1F7"/>
+  </g>
+
+  <!-- Open shipping box -->
+  <g transform="translate(600, 540) rotate(-12) skewX(-18) scale(1, 0.88)">
+    <rect x="-60" y="-90" width="120" height="90"
+          fill="#3267FD" fill-opacity="0.15" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="-80" y="-90" width="20" height="130" fill="#3267FD" fill-opacity="0.25"/>
+    <rect x="60" y="-90" width="20" height="130" fill="#3267FD" fill-opacity="0.25"/>
+    <rect x="-60" y="0" width="120" height="40"
+          fill="#0B1020" fill-opacity="0.8" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="-60" y="40" width="120" height="20" fill="none" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="-90" y="-100" width="40" height="20"
+          fill="#3267FD" fill-opacity="0.3" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="50" y="-100" width="40" height="20"
+          fill="#3267FD" fill-opacity="0.3" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="-60" y="0" width="120" height="40"
+          fill="none" stroke="#00E1F7" stroke-width="2" filter="url(#cyanGlow)" opacity="0.5"/>
+  </g>
+
+  <!-- Conveyor platform -->
+  <g transform="translate(900, 570) rotate(-12) skewX(-18) scale(1, 0.88)">
+    <rect x="-120" y="-20" width="240" height="40"
+          fill="#3267FD" fill-opacity="0.12" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="-120" y="-20" width="240" height="40"
+          fill="none" stroke="#00E1F7" stroke-width="2" filter="url(#cyanGlow)" opacity="0.5"/>
+    <rect x="-100" y="20" width="20" height="40" fill="#3267FD"/>
+    <rect x="80" y="20" width="20" height="40" fill="#3267FD"/>
+    <line x1="-100" y1="0" x2="100" y2="0" stroke="#00E1F7" stroke-width="2" stroke-dasharray="10,10"/>
+  </g>
+
+  <!-- Sealed box with check mark -->
+  <g transform="translate(900, 500) rotate(-12) skewX(-18) scale(1, 0.88)">
+    <rect x="-50" y="-50" width="100" height="100"
+          fill="#0B1020" fill-opacity="0.6" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="-50" y="-70" width="100" height="20" fill="#3267FD"/>
+    <line x1="0" y1="-70" x2="0" y2="-30" stroke="#00E1F7" stroke-width="2"/>
+    <polyline points="-25,0 -5,20 30,-25" fill="none" stroke="#00E1F7" stroke-width="5"/>
+    <rect x="-50" y="-50" width="100" height="100"
+          fill="none" stroke="#00E1F7" stroke-width="2" filter="url(#cyanGlow)" opacity="0.5"/>
+  </g>
+
+  <!-- Floating package cubes -->
+  <g transform="translate(400, 560) rotate(-20) skewX(-22) scale(1, 0.85)">
+    <rect x="-14" y="-14" width="28" height="28"
+          fill="#00E1F7" fill-opacity="0.5" stroke="#00E1F7" stroke-width="2"/>
+  </g>
+  <g transform="translate(520, 480) rotate(-8) skewX(-15) scale(1, 0.90)">
+    <rect x="-12" y="-12" width="24" height="24"
+          fill="#3267FD" stroke="#00E1F7" stroke-width="2"/>
+  </g>
+  <g transform="translate(720, 450) rotate(-18) skewX(-20) scale(1, 0.88)">
+    <rect x="-10" y="-10" width="20" height="20"
+          fill="#FFFFFF" fill-opacity="0.15" stroke="#00E1F7" stroke-width="2"/>
+  </g>
+  <g transform="translate(880, 430) rotate(-15) skewX(-18) scale(1, 0.88)">
+    <rect x="-12" y="-12" width="24" height="24"
+          fill="#00E1F7" fill-opacity="0.4" stroke="#00E1F7" stroke-width="2"/>
+  </g>
+</svg>

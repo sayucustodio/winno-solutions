@@ -1,0 +1,63 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cyanGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Floating color swatch row -->
+  <g transform="translate(600, 170) rotate(-12) skewX(-18) scale(1, 0.88)">
+    <rect x="-160" y="-30" width="320" height="60" fill="#3267FD" fill-opacity="0.10" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="-160" y="-30" width="320" height="60" fill="none" stroke="#00E1F7" stroke-width="2" filter="url(#cyanGlow)" opacity="0.5"/>
+    <rect x="-140" y="-15" width="36" height="36" fill="#3267FD"/>
+    <rect x="-90" y="-15" width="36" height="36" fill="#00E1F7"/>
+    <rect x="-40" y="-15" width="36" height="36" fill="#FFFFFF"/>
+    <rect x="10" y="-15" width="36" height="36" fill="#3267FD" fill-opacity="0.6"/>
+    <rect x="60" y="-15" width="36" height="36" fill="#00E1F7" fill-opacity="0.6"/>
+    <rect x="110" y="-15" width="36" height="36" fill="#0B1020" stroke="#00E1F7" stroke-width="2"/>
+  </g>
+
+  <!-- Header bar -->
+  <g transform="translate(600, 310) rotate(-12) skewX(-18) scale(1, 0.88)">
+    <rect x="-300" y="-30" width="600" height="60" fill="#0B1020" fill-opacity="0.60" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="-300" y="-30" width="600" height="60" fill="none" stroke="#00E1F7" stroke-width="2" filter="url(#cyanGlow)" opacity="0.5"/>
+    <rect x="-270" y="-15" width="50" height="30" fill="#3267FD"/>
+    <line x1="-180" y1="-5" x2="280" y2="-5" stroke="#3267FD" stroke-width="3"/>
+    <line x1="-180" y1="8" x2="240" y2="8" stroke="#3267FD" stroke-width="3"/>
+  </g>
+
+  <!-- Hero banner -->
+  <g transform="translate(600, 460) rotate(-12) skewX(-18) scale(1, 0.88)">
+    <rect x="-320" y="-80" width="640" height="160" fill="#3267FD" fill-opacity="0.20" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="-320" y="-80" width="640" height="160" fill="none" stroke="#00E1F7" stroke-width="2" filter="url(#cyanGlow)" opacity="0.5"/>
+    <rect x="-280" y="-50" width="240" height="100" fill="#0B1020" fill-opacity="0.8"/>
+    <rect x="20" y="-30" width="260" height="16" fill="#FFFFFF"/>
+    <rect x="20" y="10" width="200" height="16" fill="#00E1F7"/>
+    <rect x="20" y="40" width="120" height="16" fill="#3267FD"/>
+  </g>
+
+  <!-- Product tiles -->
+  <g transform="translate(600, 670) rotate(-12) skewX(-18) scale(1, 0.88)">
+    <!-- Tile 1 -->
+    <rect x="-312" y="-80" width="184" height="160" fill="#0B1020" fill-opacity="0.60" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="-312" y="-80" width="184" height="160" fill="none" stroke="#00E1F7" stroke-width="2" filter="url(#cyanGlow)" opacity="0.5"/>
+    <rect x="-292" y="-60" width="144" height="90" fill="#3267FD"/>
+    <rect x="-292" y="40" width="144" height="24" fill="#00E1F7"/>
+
+    <!-- Tile 2 -->
+    <rect x="-92" y="-80" width="184" height="160" fill="#0B1020" fill-opacity="0.60" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="-92" y="-80" width="184" height="160" fill="none" stroke="#00E1F7" stroke-width="2" filter="url(#cyanGlow)" opacity="0.5"/>
+    <rect x="-72" y="-60" width="144" height="90" fill="#FFFFFF" fill-opacity="0.15"/>
+    <rect x="-72" y="40" width="144" height="24" fill="#3267FD"/>
+
+    <!-- Tile 3 -->
+    <rect x="128" y="-80" width="184" height="160" fill="#0B1020" fill-opacity="0.60" stroke="#00E1F7" stroke-width="2"/>
+    <rect x="128" y="-80" width="184" height="160" fill="none" stroke="#00E1F7" stroke-width="2" filter="url(#cyanGlow)" opacity="0.5"/>
+    <rect x="148" y="-60" width="144" height="90" fill="#3267FD" fill-opacity="0.5"/>
+    <rect x="148" y="40" width="144" height="24" fill="#00E1F7"/>
+  </g>
+</svg>

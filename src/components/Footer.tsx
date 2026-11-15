@@ -1,98 +1,91 @@
-import { Facebook, Instagram, Linkedin, MessageCircle } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
+import logo from '@/assets/winno-logo.svg';
+import { SITE } from '@/lib/site';
+import { useLang } from '@/i18n/LanguageContext';
+import { NAV_LINKS } from '@/i18n/translations';
+
+const focusRing =
+  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#00E1F7]';
 
 const Footer = () => {
-  const quickLinks = [
-    { name: 'Inicio', href: '#inicio' },
-    { name: 'Servicios', href: '#servicios' },
-    { name: 'Planes', href: '#planes' },
-    { name: 'Contacto', href: '#contacto' }
-  ];
-
-  const socialLinks = [
-    { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61579592981734', name: 'Facebook' },
-    { icon: Instagram, href: 'https://www.instagram.com/winno.solutions.pe?igsh=MTk0YTVsbWxnbmpvcw==', name: 'Instagram' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/winnosolutions/', name: 'LinkedIn' },
-    { icon: MessageCircle, href: 'https://wa.me/51966442710', name: 'WhatsApp' }
-  ];
-
+  const { t } = useLang();
   return (
-    <footer className="bg-gradient-to-r from-foreground via-gray-800 to-foreground text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Logo & Tagline */}
-          <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">W</span>
-              </div>
-              <span className="text-xl font-bold">WINNO SOLUTIONS</span>
-            </div>
-            <p className="text-gray-300 mb-4 max-w-md">
-              Innova + Gana
-            </p>
-            <p className="text-gray-400 text-sm max-w-md">
-              Transformamos ideas en soluciones digitales que impulsan el crecimiento de tu negocio.
+    <footer className="relative overflow-hidden bg-[#0B1020] text-white">
+      <div className="mx-auto max-w-7xl px-4 pt-20 sm:px-6 lg:px-8 lg:pt-28">
+        <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
+          {/* Marca */}
+          <div className="lg:col-span-6">
+            <a href="#inicio" className={`inline-flex items-center gap-3 ${focusRing}`}>
+              <img src={logo} alt="" className="h-9 w-auto" />
+            </a>
+            <p className="mt-6 max-w-sm font-display text-2xl font-bold leading-snug tracking-tight text-white/90">
+              {t.footer.slogan}
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Links Rápidos</h3>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
+          {/* Navegación */}
+          <nav className="lg:col-span-3" aria-label={t.footer.nav}>
+            <ul className="space-y-3 font-sans text-base">
+              {NAV_LINKS.map((l) => (
+                <li key={l.key}>
                   <a
-                    href={link.href}
-                    className="text-gray-300 hover:text-primary transition-colors duration-300"
+                    href={l.href}
+                    className={`text-white/65 transition-colors hover:text-[#00E1F7] ${focusRing}`}
                   >
-                    {link.name}
+                    {t.nav.items[l.key]}
                   </a>
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Contact & Social */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Síguenos</h3>
-            <div className="flex space-x-4 mb-6">
-              {socialLinks.map((social) => {
-                const IconComponent = social.icon;
-                return (
+          {/* Contacto */}
+          <div className="lg:col-span-3">
+            <ul className="space-y-3 font-sans text-base">
+              <li>
+                <a
+                  href={`mailto:${SITE.email}`}
+                  className={`text-white/65 transition-colors hover:text-[#00E1F7] ${focusRing}`}
+                >
+                  {SITE.email}
+                </a>
+              </li>
+              {SITE.whatsapp && (
+                <li>
                   <a
-                    key={social.name}
-                    href={social.href}
-                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-all duration-300 hover:scale-110"
-                    aria-label={social.name}
+                    href={`https://wa.me/${SITE.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-white/65 transition-colors hover:text-[#00E1F7] ${focusRing}`}
                   >
-                    <IconComponent className="w-5 h-5" />
+                    WhatsApp
                   </a>
-                );
-              })}
-            </div>
-            
-            <div className="text-gray-300 text-sm">
-              <p>📧 winno.solutions@gmail.com</p>
-              <p>📱 +51 966442710</p>
-            </div>
+                </li>
+              )}
+            </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            © 2025 WINNO Solutions. Todos los derechos reservados.
-          </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
-              Términos de Servicio
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
-              Política de Privacidad
-            </a>
-          </div>
+        {/* Barra inferior */}
+        <div className="mt-20 flex flex-col gap-4 border-t border-white/10 py-6 font-sans text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} WINNO Solutions. {t.footer.rights}</p>
+          <a
+            href="#inicio"
+            className={`inline-flex items-center gap-2 transition-colors hover:text-white ${focusRing}`}
+          >
+            {t.footer.top}
+            <ArrowUp size={14} aria-hidden />
+          </a>
         </div>
       </div>
+
+      {/* Marca gigante: firma de cierre */}
+      <p
+        aria-hidden
+        className="pointer-events-none -mb-[0.12em] select-none whitespace-nowrap text-center font-display text-[19vw] font-extrabold leading-[0.8] tracking-tighter text-white/[0.05]"
+      >
+        WINNO
+      </p>
     </footer>
   );
 };

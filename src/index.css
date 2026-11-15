@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap');
+
 
 /* WINNO SOLUTIONS Design System - Modern Tech Landing */
 
@@ -107,8 +109,9 @@
     @apply border-border;
   }
 
+  html { scroll-behavior: smooth; }
   body {
-    @apply bg-background text-foreground font-poppins;
+    @apply bg-background text-foreground font-manrope;
   }
   
   /* Custom Animations */

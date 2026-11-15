@@ -1,29 +1,25 @@
+import About from '@/components/About';
+import Contact from '@/components/Contact';
+import Expertise from '@/components/Expertise';
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Services from '@/components/Services';
-import Benefits from '@/components/Benefits';
-import Pricing from '@/components/Pricing';
-import Testimonials from '@/components/Testimonials';
-import Blog from '@/components/Blog';
-import FinalCTA from '@/components/FinalCTA';
-import Footer from '@/components/Footer';
-import Portafolio from '@/components/Portafolio';
+import Loader from '@/components/Loader';
+import Process from '@/components/Process';
+import Product from '@/components/Product';
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Loader />
       <Header />
       <main>
         <Hero />
         <About />
-        <Services />
-        <Benefits />
-        <Portafolio />
-        {/* <Pricing /> */}
-        <Testimonials />
-        {/* <Blog /> */}
-        <FinalCTA />
+        <Expertise />
+        <Product />
+        <Process />
+        <Contact />
       </main>
       <Footer />
     </div>
