@@ -2,7 +2,10 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useLang } from '@/i18n/LanguageContext';
 import { MARK_PATH, DOT_PATH, MARK_VIEWBOX } from '@/lib/winnoMark';
 
-const SESSION_KEY = 'winno-loaded'; // solo se muestra en la primera carga de cada sesión
+// true  = el loader se muestra en CADA carga y recarga de la página
+// false = solo en la primera carga de cada sesión (al cerrar la pestaña vuelve a salir)
+const SHOW_EVERY_TIME = true;
+const SESSION_KEY = 'winno-loaded';
 const MIN_MS = 1800; // tiempo mínimo para que la animación se aprecie
 const MAX_MS = 6000; // tope de seguridad: nunca bloquea la página más de esto
 const HOLD_MS = 450; // pausa al llegar a 100 (la bolita "late")
@@ -15,6 +18,7 @@ const BOTTOM = 275; // borde inferior
 const shouldSkip = () => {
   if (typeof window === 'undefined') return true;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return true;
+  if (SHOW_EVERY_TIME) return false;
   try {
     return window.sessionStorage.getItem(SESSION_KEY) === '1';
   } catch {
