@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
-import { ArrowUpRight } from 'lucide-react';
-import { useLang } from '@/i18n/LanguageContext';
+import { useEffect, useRef } from "react";
+import { ArrowUpRight } from "lucide-react";
+import { useLang } from "@/i18n/LanguageContext";
 
 type Node = { x: number; y: number; vx: number; vy: number; r: number };
 
@@ -14,11 +14,13 @@ const NetworkCanvas = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas?.getContext('2d');
+    const ctx = canvas?.getContext("2d");
     const host = canvas?.parentElement;
     if (!canvas || !ctx || !host) return;
 
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     const LINK = 140;
     const PROBE_R = 210;
 
@@ -56,14 +58,23 @@ const NetworkCanvas = () => {
 
       // Objetivo del sensor: el puntero, o una trayectoria suave por la derecha
       const tx = pointer ? pointer.x : w * (0.7 + 0.16 * Math.sin(t * 0.00035));
-      const ty = pointer ? pointer.y : h * (0.5 + 0.28 * Math.sin(t * 0.0005 + 1));
+      const ty = pointer
+        ? pointer.y
+        : h * (0.5 + 0.28 * Math.sin(t * 0.0005 + 1));
       probe.x += (tx - probe.x) * 0.07;
       probe.y += (ty - probe.y) * 0.07;
 
       // Resplandor del sensor
-      const glow = ctx.createRadialGradient(probe.x, probe.y, 0, probe.x, probe.y, 170);
-      glow.addColorStop(0, 'rgba(0,225,247,0.16)');
-      glow.addColorStop(1, 'rgba(0,225,247,0)');
+      const glow = ctx.createRadialGradient(
+        probe.x,
+        probe.y,
+        0,
+        probe.x,
+        probe.y,
+        170,
+      );
+      glow.addColorStop(0, "rgba(0,225,247,0.16)");
+      glow.addColorStop(1, "rgba(0,225,247,0)");
       ctx.fillStyle = glow;
       ctx.fillRect(probe.x - 170, probe.y - 170, 340, 340);
 
@@ -114,7 +125,7 @@ const NetworkCanvas = () => {
           }
         }
 
-        ctx.fillStyle = near ? '#00E1F7' : 'rgba(95,140,255,0.85)';
+        ctx.fillStyle = near ? "#00E1F7" : "rgba(95,140,255,0.85)";
         ctx.beginPath();
         ctx.arc(n.x, n.y, near ? n.r + 0.6 : n.r, 0, Math.PI * 2);
         ctx.fill();
@@ -147,28 +158,36 @@ const NetworkCanvas = () => {
     resize();
     const ro = new ResizeObserver(resize);
     ro.observe(host);
-    const io = new IntersectionObserver(([entry]) => (entry.isIntersecting ? start() : stop()));
+    const io = new IntersectionObserver(([entry]) =>
+      entry.isIntersecting ? start() : stop(),
+    );
     io.observe(host);
 
-    host.addEventListener('pointermove', onMove);
-    host.addEventListener('pointerleave', onLeave);
-    document.addEventListener('visibilitychange', onVisibility);
+    host.addEventListener("pointermove", onMove);
+    host.addEventListener("pointerleave", onLeave);
+    document.addEventListener("visibilitychange", onVisibility);
 
     return () => {
       stop();
       ro.disconnect();
       io.disconnect();
-      host.removeEventListener('pointermove', onMove);
-      host.removeEventListener('pointerleave', onLeave);
-      document.removeEventListener('visibilitychange', onVisibility);
+      host.removeEventListener("pointermove", onMove);
+      host.removeEventListener("pointerleave", onLeave);
+      document.removeEventListener("visibilitychange", onVisibility);
     };
   }, []);
 
-  return <canvas ref={canvasRef} aria-hidden className="absolute inset-0 h-full w-full" />;
+  return (
+    <canvas
+      ref={canvasRef}
+      aria-hidden
+      className="absolute inset-0 h-full w-full"
+    />
+  );
 };
 
 const focusRing =
-  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#00E1F7]';
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#00E1F7]";
 
 const Hero = () => {
   const { t } = useLang();
@@ -203,7 +222,7 @@ const Hero = () => {
       <div className="relative mx-auto w-full max-w-7xl px-4 pb-24 pt-32 sm:px-6 lg:px-8">
         <p
           className="winno-rise flex items-center gap-3 font-sans text-xs font-semibold tracking-[0.18em] text-[#00E1F7]"
-          style={{ ['--d' as string]: '0ms' }}
+          style={{ ["--d" as string]: "0ms" }}
         >
           <span aria-hidden className="block h-px w-8 bg-[#00E1F7]" />
           {t.hero.eyebrow}
@@ -211,25 +230,25 @@ const Hero = () => {
 
         <h1
           className="winno-rise mt-6 max-w-4xl font-display text-5xl font-extrabold leading-[1.02] tracking-tight text-white [text-wrap:balance] sm:text-6xl lg:text-7xl xl:text-[5.5rem]"
-          style={{ ['--d' as string]: '120ms' }}
+          style={{ ["--d" as string]: "120ms" }}
         >
           {t.hero.title}
         </h1>
 
         <p
           className="winno-rise mt-7 max-w-xl font-sans text-base leading-relaxed text-white/70 sm:text-lg"
-          style={{ ['--d' as string]: '260ms' }}
+          style={{ ["--d" as string]: "260ms" }}
         >
           {t.hero.text}
         </p>
 
         <div
           className="winno-rise mt-10 flex flex-col gap-4 sm:flex-row"
-          style={{ ['--d' as string]: '380ms' }}
+          style={{ ["--d" as string]: "380ms" }}
         >
           <a
             href="#nosotros"
-            className={`inline-flex items-center justify-center gap-2 rounded-none bg-[#3267FD] px-7 py-4 font-display text-sm font-bold text-white transition-colors duration-200 hover:bg-[#00E1F7] hover:text-[#0B1020] ${focusRing}`}
+            className={`inline-flex items-center justify-center gap-2 rounded-none bg-primary px-7 py-4 font-display text-sm font-bold text-white transition-colors duration-200 hover:bg-[#00E1F7] hover:text-[#0B1020] ${focusRing}`}
           >
             {t.hero.primary}
             <ArrowUpRight size={16} strokeWidth={2.5} aria-hidden />

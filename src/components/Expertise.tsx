@@ -1,5 +1,5 @@
-import { Code2, MonitorSmartphone, Workflow, Lightbulb } from 'lucide-react';
-import { useLang } from '@/i18n/LanguageContext';
+import { Code2, MonitorSmartphone, Workflow, Lightbulb } from "lucide-react";
+import { useLang } from "@/i18n/LanguageContext";
 
 // Un ícono por servicio, en el mismo orden que t.expertise.services
 const icons = [Code2, MonitorSmartphone, Workflow, Lightbulb];
@@ -44,7 +44,7 @@ const Expertise = () => {
 
                   <span
                     aria-hidden
-                    className="flex h-12 w-12 shrink-0 items-center justify-center border border-white/25 text-[#00E1F7] transition-colors duration-300 group-hover:border-[#3267FD] group-hover:bg-[#3267FD] group-hover:text-white motion-reduce:transition-none sm:h-14 sm:w-14"
+                    className="flex h-12 w-12 shrink-0 items-center justify-center border border-white/25 text-[#00E1F7] transition-colors duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-white motion-reduce:transition-none sm:h-14 sm:w-14"
                   >
                     <Icon size={24} strokeWidth={1.75} />
                   </span>

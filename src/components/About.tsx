@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
-import { useLang } from '@/i18n/LanguageContext';
+import { useEffect, useRef, useState } from "react";
+import { useLang } from "@/i18n/LanguageContext";
+import Clients from "./Clients";
 
 /**
  * Cada concepto pasa de gris tenue a tinta cuando llega al centro de la
@@ -13,7 +14,7 @@ const ConceptRow = ({ index, label }: { index: number; label: string }) => {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setOn(true);
       return;
     }
@@ -25,7 +26,7 @@ const ConceptRow = ({ index, label }: { index: number; label: string }) => {
           io.disconnect();
         }
       },
-      { rootMargin: '-30% 0px -30% 0px' }
+      { rootMargin: "-30% 0px -30% 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
@@ -39,14 +40,14 @@ const ConceptRow = ({ index, label }: { index: number; label: string }) => {
       <div className="flex items-baseline gap-5 sm:gap-8">
         <span
           className={`font-sans text-sm font-semibold tabular-nums transition-colors duration-700 motion-reduce:transition-none ${
-            on ? 'text-[#3267FD]' : 'text-[#0B1020]/25'
+            on ? "text-primary" : "text-[#0B1020]/25"
           }`}
         >
-          {String(index + 1).padStart(2, '0')}
+          {String(index + 1).padStart(2, "0")}
         </span>
         <span
           className={`font-display text-5xl font-extrabold leading-none tracking-tight transition-colors duration-700 motion-reduce:transition-none sm:text-7xl lg:text-8xl ${
-            on ? 'text-[#0B1020]' : 'text-[#0B1020]/15'
+            on ? "text-[#0B1020]" : "text-[#0B1020]/15"
           }`}
         >
           {label}
@@ -55,7 +56,7 @@ const ConceptRow = ({ index, label }: { index: number; label: string }) => {
       <span
         aria-hidden
         className={`block h-3 w-3 shrink-0 transition-colors duration-700 motion-reduce:transition-none sm:h-4 sm:w-4 ${
-          on ? 'bg-[#00E1F7]' : 'bg-[#0B1020]/10'
+          on ? "bg-[#00E1F7]" : "bg-[#0B1020]/10"
         }`}
       />
     </li>
@@ -73,8 +74,8 @@ const About = () => {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Título */}
           <div className="lg:col-span-7">
-            <p className="flex items-center gap-3 font-sans text-xs font-semibold tracking-[0.18em] text-[#3267FD]">
-              <span aria-hidden className="block h-px w-8 bg-[#3267FD]" />
+            <p className="flex items-center gap-3 font-sans text-xs font-semibold tracking-[0.18em] text-primary">
+              <span aria-hidden className="block h-px w-8 bg-primary" />
               {t.about.eyebrow}
             </p>
             <h2 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
@@ -88,6 +89,7 @@ const About = () => {
             <p className="max-w-md font-sans text-lg leading-relaxed text-[#0B1020]/70">
               {t.about.text}
             </p>
+            <Clients />
           </div>
         </div>
 

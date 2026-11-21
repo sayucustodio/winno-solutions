@@ -123,7 +123,7 @@ const Header = () => {
               <LanguageSwitcher />
               <button
                 onClick={goToContact}
-                className={`inline-flex items-center gap-2 rounded-none bg-[#3267FD] px-5 py-2.5 font-display text-sm font-bold text-white transition-colors duration-200 hover:bg-[#00E1F7] hover:text-[#0B1020] ${focusRing}`}
+                className={`inline-flex items-center gap-2 rounded-none bg-primary px-5 py-2.5 font-display text-sm font-bold text-white transition-colors duration-200 hover:bg-[#00E1F7] hover:text-[#0B1020] ${focusRing}`}
               >
                 {t.nav.cta}
               </button>
@@ -182,7 +182,7 @@ const Header = () => {
           <button
             onClick={goToContact}
             tabIndex={isMenuOpen ? 0 : -1}
-            className={`flex w-full items-center justify-center gap-2 rounded-none bg-[#3267FD] py-4 font-display text-base font-bold text-white hover:bg-[#00E1F7] hover:text-[#0B1020] transition-colors ${focusRing}`}
+            className={`flex w-full items-center justify-center gap-2 rounded-none bg-primary py-4 font-display text-base font-bold text-white hover:bg-[#00E1F7] hover:text-[#0B1020] transition-colors ${focusRing}`}
           >
             {t.nav.cta}
           </button>

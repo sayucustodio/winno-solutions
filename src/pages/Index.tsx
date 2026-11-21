@@ -1,4 +1,5 @@
 import About from '@/components/About';
+import ChatWidget from '@/components/ChatBot';
 import Contact from '@/components/Contact';
 import Expertise from '@/components/Expertise';
 import Footer from '@/components/Footer';
@@ -22,6 +23,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+      <ChatWidget />
     </div>
   );
 };

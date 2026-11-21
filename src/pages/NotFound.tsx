@@ -1,19 +1,22 @@
-import { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import logo from '@/assets/winno-logo.svg';
-import { useLang } from '@/i18n/LanguageContext';
-import LanguageSwitcher from '@/i18n/LanguageSwitcher';
-import { MARK_PATH, DOT_PATH, MARK_VIEWBOX, DOT_CENTER } from '@/lib/winnoMark';
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/winno-logo.svg";
+import { useLang } from "@/i18n/LanguageContext";
+import LanguageSwitcher from "@/i18n/LanguageSwitcher";
+import { MARK_PATH, DOT_PATH, MARK_VIEWBOX, DOT_CENTER } from "@/lib/winnoMark";
 
 const focusRing =
-  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#00E1F7]';
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#00E1F7]";
 
 const NotFound = () => {
   const { t } = useLang();
   const location = useLocation();
 
   useEffect(() => {
-    console.error('404 Error: User attempted to access non-existent route:', location.pathname);
+    console.error(
+      "404 Error: User attempted to access non-existent route:",
+      location.pathname,
+    );
   }, [location.pathname]);
 
   return (
@@ -38,7 +41,11 @@ const NotFound = () => {
 
       {/* Barra superior */}
       <header className="relative z-10 mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className={`flex items-center ${focusRing}`} aria-label={t.nav.home}>
+        <Link
+          to="/"
+          className={`flex items-center ${focusRing}`}
+          aria-label={t.nav.home}
+        >
           <img src={logo} alt="WINNO Solutions" className="h-10 w-auto" />
         </Link>
         <LanguageSwitcher />
@@ -60,7 +67,7 @@ const NotFound = () => {
             </p>
             <Link
               to="/"
-              className={`mt-10 inline-flex items-center justify-center rounded-none bg-[#3267FD] px-7 py-4 font-display text-sm font-bold text-white transition-colors duration-200 hover:bg-[#00E1F7] hover:text-[#0B1020] ${focusRing}`}
+              className={`mt-10 inline-flex items-center justify-center rounded-none bg-primary px-7 py-4 font-display text-sm font-bold text-white transition-colors duration-200 hover:bg-[#00E1F7] hover:text-[#0B1020] ${focusRing}`}
             >
               {t.notFound.cta}
             </Link>
@@ -86,7 +93,12 @@ const NotFound = () => {
                 strokeDasharray="4 5"
               />
               {/* La bolita, a la deriva */}
-              <path d={DOT_PATH} fill="#00E1F7" fillRule="evenodd" className="winno-lost" />
+              <path
+                d={DOT_PATH}
+                fill="#00E1F7"
+                fillRule="evenodd"
+                className="winno-lost"
+              />
             </svg>
           </div>
         </div>

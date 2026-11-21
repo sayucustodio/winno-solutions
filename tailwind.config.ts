@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#003daa",
+        primary: "#003caa",
         accent: "#00e1f7",
 
         // Colores adicionales que ya utilizabas
