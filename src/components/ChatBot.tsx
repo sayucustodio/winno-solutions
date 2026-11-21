@@ -223,7 +223,7 @@ const ChatWidget = () => {
 
       {/* Botón flotante */}
       <div className="fixed bottom-5 right-5 z-[60] flex items-center gap-3 sm:bottom-6 sm:right-6">
-        {hint && !open && (
+        {!open && (
           <button
             type="button"
             onClick={() => setOpen(true)}
